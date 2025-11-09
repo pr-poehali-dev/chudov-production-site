@@ -17,10 +17,10 @@ const Index = () => {
     },
     {
       id: 2,
-      title: 'Dark Legends',
-      genre: 'RPG',
-      image: 'https://cdn.poehali.dev/projects/dc15edd9-3f8f-4860-a3e0-f913ab409909/files/7de88198-e0e2-4a56-8c53-e3df8bc34c29.jpg',
-      description: 'Эпическое фэнтези-приключение',
+      title: 'Destruction',
+      genre: 'Action-Horror',
+      image: 'https://cdn.poehali.dev/files/903e0578-adb9-480b-a812-c222906ec333.jpg',
+      description: 'Психологический хоррор с мрачной атмосферой',
       year: '2024'
     },
     {
