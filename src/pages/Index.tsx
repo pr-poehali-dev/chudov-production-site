@@ -25,7 +25,7 @@ const Index = () => {
       tagline: 'Cannot be avoided | Разрушения не избежать',
       platforms: 'PC, PS5',
       rating: 'ESRB – AO, PEGI – 18+',
-      year: '2024'
+      year: '2026'
     },
     {
       id: 3,
