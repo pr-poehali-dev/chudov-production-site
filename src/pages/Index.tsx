@@ -17,10 +17,14 @@ const Index = () => {
     },
     {
       id: 2,
-      title: 'Destruction',
-      genre: 'Action-Horror',
+      title: 'DESTRUCTION',
+      genre: 'Immersive Action RPG',
       image: 'https://cdn.poehali.dev/files/903e0578-adb9-480b-a812-c222906ec333.jpg',
-      description: 'Психологический хоррор с мрачной атмосферой',
+      description: 'Эпическая RPG в угасающем мире. Cannot be avoided.',
+      fullDescription: 'Эпическая иммерсивная ролевая игра, где в угасающем мире разворачивается история людей, из последних сил сражающихся за жизнь и все, что им дорого. Несколько параллельно развивающихся сюжетных линий, связанных в одну историю. Массовые сражения и развивающиеся поселения в авторской вселенной темной фантастики с фэнтези элементами.',
+      tagline: 'Cannot be avoided | Разрушения не избежать',
+      platforms: 'PC, PS5',
+      rating: 'ESRB – AO, PEGI – 18+',
       year: '2024'
     },
     {
@@ -157,8 +161,25 @@ const Index = () => {
                     <div className="p-8 flex flex-col justify-center">
                       <span className="text-secondary font-heading font-bold text-sm mb-3">{game.genre} • {game.year}</span>
                       <h3 className="text-3xl font-heading font-bold mb-4">{game.title}</h3>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">{game.description}</p>
-                      <div className="space-y-3">
+                      {'tagline' in game && (
+                        <p className="text-primary/80 italic mb-3 text-sm font-semibold">{game.tagline}</p>
+                      )}
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        {'fullDescription' in game ? game.fullDescription : game.description}
+                      </p>
+                      {'platforms' in game && (
+                        <div className="mb-2">
+                          <span className="text-xs text-muted-foreground">Платформы: </span>
+                          <span className="text-xs text-foreground font-semibold">{game.platforms}</span>
+                        </div>
+                      )}
+                      {'rating' in game && (
+                        <div className="mb-6">
+                          <span className="text-xs text-muted-foreground">Возраст: </span>
+                          <span className="text-xs text-foreground font-semibold">{game.rating}</span>
+                        </div>
+                      )}
+                      <div className="space-y-3 mt-auto">
                         <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-semibold">
                           Купить игру
                         </Button>
